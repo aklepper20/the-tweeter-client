@@ -1,3 +1,4 @@
+
 const Tweet = {
   tweetsContainer: document.querySelector('.tweets-container'),
   createTweet: function(tweetData) {
@@ -15,5 +16,12 @@ const Tweet = {
       htmlString += newTweet;
     }
     this.tweetsContainer.innerHTML = htmlString;
+  },
+  postTweet: function(tweetObj) {
+    axios.post(`${App.baseUrl}/tweets`, tweetObj)
+    .then(function (response) {
+      console.log(response)
+    })
+
   }
 }
