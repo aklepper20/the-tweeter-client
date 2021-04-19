@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href="public/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="node_modules/axios/dist/axios.js"></script>
   <title>Tweeter</title>
 </head>
@@ -11,11 +12,35 @@
   <header>
     <h1>Tweeter</h1>
   </header>
-  <textarea rows="3" placeholder="What's tweetin?" class="new-tweet">
-  </textarea>
-  <button class="tweet-btn btn">Send Tweet</button>
-  <div class='tweets-container'>
+  <div class="submit-tweet-container">
 
+    <div class="row-tweet-input">
+      <img src="https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg" class="profile-icon">
+      <input type="text" placeholder="What's tweetin'?" class="new-tweet">
+    </div>
+
+
+      <div class="row-icons">
+
+        <div class="col-half-icons">
+          <img class="img-icon"
+            src="https://th.bing.com/th/id/Rfe4cc2cc550b856237c721e1d0deac87?rik=zxjjfdK4GJNkbg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_234957.png&ehk=Fi1SrQ6CCna9G4YthIa%2fPeLqp2EuDeiIUU7VEihDa1E%3d&risl=&pid=ImgRaw">
+          <img class="img-icon"
+            src="https://th.bing.com/th/id/R25174454133deb934c4d5efba2515499?rik=bn4%2f7V3aWgPwGg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_221521.png&ehk=J4vWgQTDXQpQ3LhGX2C1A6wCEN%2fk7DOlgpgteuR9qJs%3d&risl=&pid=ImgRaw">
+          <img class="img-icon"
+            src="https://th.bing.com/th/id/R893a0c63f9828a24b4110bedb8cd8f3d?rik=hzOv0H5mc6fBTA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_65467.png&ehk=5cvPYeecHOZAJ5t%2faQzJHQrQ8ZvsZdwaaLdOSI%2fCHhc%3d&risl=&pid=ImgRaw">
+          <img class="img-icon" src="https://www.nicepng.com/png/full/152-1529091_happy-smile-png-smiley-face-icon-png.png">
+        </div>
+
+        <div class="col-half-icons">
+         <button class="tweet-btn btn">Send Tweet</button>
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class='tweets-container'>
   </div>
   <script src="public/js/eventListeners.js"></script>
   <script src="public/js/tweet.js"></script>

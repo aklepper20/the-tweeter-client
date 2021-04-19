@@ -3,9 +3,9 @@ const Tweet = {
   tweetsContainer: document.querySelector('.tweets-container'),
   createTweet: function(tweetData) {
     //write code here for creating a new tweet (used to dynamically create html content)
-    return `<div>
-      <h4>${tweetData.username}</h4>
-      <p>${tweetData.message}</p>
+    return `<div class="tweet-card">
+      <h4 class="user-name">@${tweetData.username}</h4>
+      <p class="user-tweet">${tweetData.message}</p>
     </div>`
   },
   renderTweets: function(tweetsArray) {

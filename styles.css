@@ -1,0 +1,63 @@
+.row-tweet-input {
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+
+.row-icons {
+  display: flex;
+  width: 100%;
+}
+
+.col-half-icons {
+  display: flex;
+  width: 50%;
+}
+
+h1 {
+  text-align: left;
+  color: blue;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.profile-icon {
+  max-width: 70px;
+  height: 60px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.img-icon {
+  width: 20px;
+  padding-top: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.new-tweet {
+  border-radius: 9999px;
+  border-style: none;
+  background-color: lightgray;
+  padding: 20px;
+  margin-top: 8px;
+  min-width: 65%;
+}
+
+.tweet-btn {
+  border-radius: 9999px;
+  border-style: none;
+  color: white;
+  background-color: blue;
+  padding: 12px;
+  margin-top: 15px;
+}
+
+.tweet-card {
+  margin-top: 20px;
+  border-bottom: solid 1px lightgray;
+}
+
+.user-name,
+.user-tweet {
+  margin: 4px;
+}
