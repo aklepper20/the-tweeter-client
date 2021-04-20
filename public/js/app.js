@@ -32,6 +32,9 @@ const App = {
        Tweet.renderTweets(response.data);
         console.log(response.data);
       })
+      .then(function() {
+        Listeners.addCommentBtn();
+      })
       .catch(function (error) {
         // handle error
         console.log(error);

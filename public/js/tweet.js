@@ -6,22 +6,27 @@ const Tweet = {
     return `<div class="tweet-card">
       <h4 class="user-name">@${tweetData.username}</h4>
       <p class="user-tweet">${tweetData.message}</p>
+      <input type="text" placeholder="Add comment here">
+      <button data-id="${tweetData._id}" class="add-comment">Add Comment</button>
     </div>`
   },
   renderTweets: function(tweetsArray) {
     //write code here for adding tweet data to the DOM
     let htmlString = '';
-    for (let i = 0; i < tweetsArray.length; i++) {
+    for (let i = tweetsArray.length - 1; i >= 0; i--) {
       const newTweet = this.createTweet(tweetsArray[i]);
       htmlString += newTweet;
     }
-    this.tweetsContainer.innerHTML = htmlString;
+     this.tweetsContainer.innerHTML = htmlString;
+    // document.querySelector('.tweets-container').innerHTML = htmlString;
   },
   postTweet: function(tweetObj) {
     axios.post(`${App.baseUrl}/tweets`, tweetObj)
     .then(function (response) {
-      console.log(response)
+      App.fetchTweets();
     })
-
+    .catch(function (error) {
+       console.error(error)
+    })
   }
 }
