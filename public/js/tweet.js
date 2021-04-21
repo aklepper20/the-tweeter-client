@@ -6,8 +6,19 @@ const Tweet = {
     return `<div class="tweet-card">
       <h4 class="user-name">@${tweetData.username}</h4>
       <p class="user-tweet">${tweetData.message}</p>
-      <input type="text" placeholder="Add comment here">
-      <button data-id="${tweetData._id}" class="add-comment">Add Comment</button>
+      <div class="tweet-info">
+        <i class="far fa-comment"></i>
+        <span>${tweetData.comments.length}</span>
+        <i class="far fa-heart"></i>
+        <span>${tweetData.likes}</span>
+      </div>
+      <div class="hide-comments">
+        <div class="comments">
+          ${Comments.createCommentsHtml(tweetData.comments)}
+        </div>
+        <input type="text" placeholder="Add comment here">
+        <button data-id="${tweetData._id}" class="add-comment">Add Comment</button>
+      </div>
     </div>`
   },
   renderTweets: function(tweetsArray) {

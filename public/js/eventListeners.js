@@ -22,8 +22,23 @@ const Listeners = {
       btn.addEventListener('click', function (event) {
         event.preventDefault();
         const tweetId = event.target.dataset.id;
-        const comment = event.target.parentNode.childNodes[5].value;
+        const comment = event.target.parentNode.childNodes[3].value;
+
         Comments.addComment(tweetId, comment);
+      })
+    }
+  },
+
+  toggleComments: function() {
+    const toggleBtns = document.querySelectorAll('.fa-comment');
+
+    for (let i = 0; i < toggleBtns.length; i++) {
+      const toggle = toggleBtns[i];
+
+      toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        const commentSection = event.target.parentNode.parentNode.childNodes[7]
+        commentSection.classList.toggle('hide-comments')
       })
     }
   }
