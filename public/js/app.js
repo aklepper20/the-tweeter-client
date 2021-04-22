@@ -35,6 +35,8 @@ const App = {
       .then(function() {
         Listeners.addCommentBtn();
         Listeners.toggleComments();
+        Listeners.toggleModal();
+        Listeners.deleteTrashCan();
       })
       .catch(function (error) {
         // handle error

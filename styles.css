@@ -68,7 +68,13 @@ h1 {
 .comment-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 300px;
+}
+
+.comment-header-details {
+  display: flex;
+  align-items: center;
 }
 
 .comment-username {
@@ -81,6 +87,26 @@ p {
 
 .comments {
   margin-left: 15px;
+}
+
+.comment-modal {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 45px;
+  left: 100px;
+  width: 150px;
+  background-color: lightskyblue;
+  padding: 20px;
+  z-index: 5;
+}
+
+.hide-modal {
+  display: none;
+}
+
+.comment-container {
+  position: relative;
 }
 
 .hide-comments {

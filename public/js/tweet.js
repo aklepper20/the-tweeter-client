@@ -14,7 +14,7 @@ const Tweet = {
       </div>
       <div class="hide-comments">
         <div class="comments">
-          ${Comments.createCommentsHtml(tweetData.comments)}
+          ${Comments.createCommentsHtml(tweetData.comments, tweetData._id)}
         </div>
         <input type="text" placeholder="Add comment here">
         <button data-id="${tweetData._id}" class="add-comment">Add Comment</button>
